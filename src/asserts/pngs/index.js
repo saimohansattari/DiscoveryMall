@@ -1,0 +1,6 @@
+export {default as Frame1} from './Frame1.png'
+export {default as Frame2} from './Frame2.png'
+export {default as Frame3} from './Frame3.png'
+export {default as Frame4} from './Frame4.png'
+export {default as Frame5} from './Frame5.png'
+export {default as Frame6} from './Frame6.png'
