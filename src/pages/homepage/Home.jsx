@@ -5,13 +5,22 @@ import {
   HomeIcon,
   MainHeader,
   MenuNavbar,
+  MenuText,
   MenubtnDiv,
   Notification,
   SearchBox,
   SearchNavbar,
   SubSearchNav,
 } from "../../components/styled.components";
-import { Bell, Bars, Search } from "../../asserts/svgs";
+import {
+  Bell,
+  Bars,
+  Search,
+  House,
+  Heart,
+  Gear,
+  Cart,
+} from "../../asserts/svgs";
 import { All, Kids, Mens, Womens } from "../navbarpages/index.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -57,7 +66,25 @@ function Home() {
 
       {/* MenuNavbar */}
       <MenuNavbar>
-        <MenubtnDiv></MenubtnDiv>
+        <MenubtnDiv>
+          <House style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
+          <MenuText>Home</MenuText>
+        </MenubtnDiv>
+
+        <MenubtnDiv>
+          <Heart style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
+          <MenuText>Saved</MenuText>
+        </MenubtnDiv>
+
+        <MenubtnDiv>
+          <Cart style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
+          <MenuText>Cart</MenuText>
+        </MenubtnDiv>
+
+        <MenubtnDiv>
+          <Gear style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
+          <MenuText>Settings</MenuText>
+        </MenubtnDiv>
       </MenuNavbar>
     </>
   );

@@ -98,15 +98,38 @@ export const NavBtn = styled.button`
 export const MenuNavbar = styled.div`
   width: 100vw;
   height: 9vh;
-  background-color: gray;
+  background-color: white;
   position: fixed;
   bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid gray;
 `;
 
 export const MenubtnDiv = styled.div`
   width: 60px;
   height: 50px;
-  background-color: yellow;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &:hover {
+    fill: black;
+  }
+`;
+
+export const MenuText = styled.p`
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #aaaaaa;
+
+  &:hover {
+    color: #000000c0;
+  }
 `;
 
 //Navbar pages Styled Components
