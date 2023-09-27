@@ -5,6 +5,7 @@ import {
   HomeIcon,
   MainHeader,
   MenuNavbar,
+  MenubtnDiv,
   Notification,
   SearchBox,
   SearchNavbar,
@@ -55,7 +56,9 @@ function Home() {
       </Router>
 
       {/* MenuNavbar */}
-      <MenuNavbar></MenuNavbar>
+      <MenuNavbar>
+        <MenubtnDiv></MenubtnDiv>
+      </MenuNavbar>
     </>
   );
 }

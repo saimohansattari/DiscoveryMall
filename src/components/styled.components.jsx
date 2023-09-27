@@ -103,6 +103,12 @@ export const MenuNavbar = styled.div`
   bottom: 0;
 `;
 
+export const MenubtnDiv = styled.div`
+  width: 60px;
+  height: 50px;
+  background-color: yellow;
+`;
+
 //Navbar pages Styled Components
 export const MainSection = styled.div`
   width: 100vw;
