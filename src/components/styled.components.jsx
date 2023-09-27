@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 //MainHeader Styled components
 export const MainHeader = styled.div`
-  padding: 10px 20px 10px 15px;
+  padding: 10px 20px 1px 15px;
   width: 100vw;
-  height: 15vh;
+  height: 12vh;
   background-color: white;
   color: red;
   display: flex;
@@ -29,13 +29,13 @@ export const SearchNavbar = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 40px;
+  height: 38px;
   background-color: white;
 `;
 
 export const SubSearchNav = styled.div`
   gap: 5px;
-  padding: 5px;
+  padding: 0px 0px 0px 4px;
   background-color: #b1b1b154;
   border-radius: 5px;
   display: flex;
@@ -70,9 +70,8 @@ export const BtnBars = styled.button`
 
 // NavbarBtns;
 export const NavbarBtnsDiv = styled.div`
-  margin-top: 7px;
+  /* margin-top: 7px; */
   padding: 0px 1px 0px 1px;
-  border-bottom: 1px solid black;
   width: 100vw;
   height: 50px;
   background-color: white;
@@ -95,24 +94,53 @@ export const NavBtn = styled.button`
   }
 `;
 
+//MenuNavbar
+export const MenuNavbar = styled.div`
+  width: 100vw;
+  height: 9vh;
+  background-color: gray;
+  position: fixed;
+  bottom: 0;
+`;
+
 //Navbar pages Styled Components
 export const MainSection = styled.div`
   width: 100vw;
+  justify-content: space-around;
   height: 100vh;
   padding: 5px 15px 5px 15px;
-  background-color: gray;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
 `;
 
 export const ProductCard = styled.div`
   width: 150px;
-  height: 210px;
-  background-color: greenyellow;
+  padding: 5px;
+  height: 205px;
+  background-color: white;
   border-radius: 4px;
+
+  &:hover {
+    border: 1px solid gray;
+  }
 `;
 
 export const ImgCard = styled.img`
   width: 149px;
-  height: 160px;
+  height: 150px;
+  margin-bottom: 5px;
+`;
+
+export const ItemName = styled.p`
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+`;
+
+export const ItemCost = styled.p`
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: gray;
 `;

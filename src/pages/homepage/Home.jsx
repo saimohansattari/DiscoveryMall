@@ -4,6 +4,7 @@ import {
   BtnBars,
   HomeIcon,
   MainHeader,
+  MenuNavbar,
   Notification,
   SearchBox,
   SearchNavbar,
@@ -52,6 +53,9 @@ function Home() {
           <Route path="/Kids" element={<Kids />} />
         </Routes>
       </Router>
+
+      {/* MenuNavbar */}
+      <MenuNavbar></MenuNavbar>
     </>
   );
 }
