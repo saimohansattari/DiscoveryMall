@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import {
+  GrayText,
   HomeIcon,
   ItemName,
   MainHeader,
@@ -8,9 +9,12 @@ import {
   ProImg,
   ProText,
   ProductDiv,
-  Text14,
+  Text12,
+  Text11,
   Text16,
-  Text21,
+  Text19,
+  SizeDiv,
+  Sizebox,
 } from "../../components/styled.components";
 import { Bell, Leftarrow, Ratingstar } from "../../asserts/svgs/index.js";
 
@@ -41,14 +45,30 @@ function Singleproduct() {
 
       <ProductDiv>
         <ProImg />
+
         <ProText>
-          <Text21>Regular fit slogan</Text21>
-          <Text14>
+          <Text19>Regular fit slogan</Text19>
+
+          <Text12>
             <Ratingstar
               style={{ width: "15px", height: "15px", fill: "yellow" }}
             />
-            &nbsp; 4.5/5
-          </Text14>
+            &nbsp; 4.5/5<GrayText>(45 Reviews)</GrayText>
+          </Text12>
+
+          <Text11>
+            <GrayText>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Possimus, illum.
+            </GrayText>
+          </Text11>
+
+          <Text16>Choose size:</Text16>
+          <SizeDiv>
+            <Sizebox>S</Sizebox>
+            <Sizebox>M</Sizebox>
+            <Sizebox>L</Sizebox>
+          </SizeDiv>
         </ProText>
       </ProductDiv>
     </div>

@@ -176,9 +176,10 @@ export const ItemCost = styled.p`
 //Single Product page Styledcomponents
 export const ProductDiv = styled.div`
   width: 100vw;
-  padding: 23px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
 `;
 
@@ -190,22 +191,61 @@ export const ProImg = styled.img`
 `;
 
 export const ProText = styled.div`
+  padding: 10px;
   width: auto;
   height: auto;
   background-color: aqua;
   float: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
 `;
 
-export const Text21 = styled.p`
+export const Text19 = styled.p`
   font-size: 21px;
   font-family: sans-serif;
   font-weight: bold;
 `;
 
-export const Text14 = styled.p`
+export const Text16 = styled.p`
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+`;
+
+export const Text11 = styled.p`
+  font-size: 11px;
+  font-weight: bold;
+  font-family: sans-serif;
+`;
+
+export const Text12 = styled.p`
   display: flex;
   align-items: center;
   font-size: 14px;
   font-family: sans-serif;
-  font-weight: 500;
+  font-weight: bold;
+`;
+
+export const GrayText = styled.p`
+  color: gray;
+`;
+
+export const SizeDiv = styled.div`
+  display: flex;
+  gap: 30px;
+`;
+
+export const Sizebox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid gray;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
 `;
