@@ -5,8 +5,7 @@ export const MainHeader = styled.div`
   padding: 10px 20px 1px 15px;
   width: 100vw;
   height: 12vh;
-  background-color: white;
-  color: red;
+  background-color: #f3acac;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -172,4 +171,41 @@ export const ItemCost = styled.p`
   font-weight: 600;
   font-size: 12px;
   color: gray;
+`;
+
+//Single Product page Styledcomponents
+export const ProductDiv = styled.div`
+  width: 100vw;
+  padding: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+`;
+
+export const ProImg = styled.img`
+  width: 310px;
+  height: 320px;
+  margin-bottom: 10px;
+  background-color: greenyellow;
+`;
+
+export const ProText = styled.div`
+  width: auto;
+  height: auto;
+  background-color: aqua;
+  float: left;
+`;
+
+export const Text21 = styled.p`
+  font-size: 21px;
+  font-family: sans-serif;
+  font-weight: bold;
+`;
+
+export const Text14 = styled.p`
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 500;
 `;

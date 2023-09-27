@@ -5,3 +5,5 @@ export { ReactComponent as Gear } from "./gear.svg";
 export { ReactComponent as Heart } from "./heart.svg";
 export { ReactComponent as Search } from "./search.svg";
 export { ReactComponent as House } from "./home.svg";
+export { ReactComponent as Leftarrow } from "./leftarrow.svg";
+export { ReactComponent as Ratingstar } from "./ratingstar.svg";
