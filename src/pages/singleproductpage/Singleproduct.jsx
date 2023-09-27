@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 function Singleproduct() {
-  return (
-    <div>Singleproduct</div>
-  )
+  const { productId } = useParams();
+  return <div>Singleproduct</div>;
 }
 
-export default Singleproduct
+export default Singleproduct;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   ImgCard,
   ItemCost,
@@ -13,11 +14,13 @@ function All() {
     <div>
       <MainSection>
         {AllImages.map((Item) => (
-          <ProductCard key={Item.id}>
-            <ImgCard src={Item.Image} />
-            <ItemName>{Item.ProductName}</ItemName>
-            <ItemCost>INR {Item.ProductPrice}</ItemCost>
-          </ProductCard>
+          <Link to={`/product/${Item.id}`} key={Item.id}>
+            <ProductCard>
+              <ImgCard src={Item.Image} />
+              <ItemName>{Item.ProductName}</ItemName>
+              <ItemCost>INR {Item.ProductPrice}</ItemCost>
+            </ProductCard>
+          </Link>
         ))}
       </MainSection>
     </div>

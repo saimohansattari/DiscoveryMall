@@ -1,4 +1,5 @@
 import React from "react";
+import Cartpage from "../cartpage/Cartpage";
 import NavbarBtns from "../navbarBtnspage/NavbarBtns";
 import {
   BtnBars,
@@ -27,6 +28,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function Home() {
   return (
     <>
+      {/* MainHeader */}
       <MainHeader>
         <HomeIcon>Discover</HomeIcon>
 
@@ -36,6 +38,8 @@ function Home() {
           />
         </Notification>
       </MainHeader>
+
+      {/* SearchNav */}
       <SearchNavbar>
         <SubSearchNav>
           <Search
@@ -53,7 +57,7 @@ function Home() {
       </SearchNavbar>
 
       {/* Navbar Btns Page */}
-      <Router>
+      <>
         <NavbarBtns />
 
         <Routes>
@@ -62,7 +66,7 @@ function Home() {
           <Route path="/Womens" element={<Womens />} />
           <Route path="/Kids" element={<Kids />} />
         </Routes>
-      </Router>
+      </>
 
       {/* MenuNavbar */}
       <MenuNavbar>
