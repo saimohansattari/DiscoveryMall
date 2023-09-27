@@ -94,3 +94,25 @@ export const NavBtn = styled.button`
     color: white;
   }
 `;
+
+//Navbar pages Styled Components
+export const MainSection = styled.div`
+  width: 100vw;
+  height: 100vh;
+  padding: 5px 15px 5px 15px;
+  background-color: gray;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const ProductCard = styled.div`
+  width: 150px;
+  height: 210px;
+  background-color: greenyellow;
+  border-radius: 4px;
+`;
+
+export const ImgCard = styled.img`
+  width: 149px;
+  height: 160px;
+`;

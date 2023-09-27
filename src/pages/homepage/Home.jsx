@@ -46,7 +46,7 @@ function Home() {
         <NavbarBtns />
 
         <Routes>
-          <Route path="/All" element={<All />} />
+          <Route path="/" element={<All />} />
           <Route path="/Mens" element={<Mens />} />
           <Route path="/Womens" element={<Womens />} />
           <Route path="/Kids" element={<Kids />} />
