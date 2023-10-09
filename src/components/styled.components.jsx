@@ -5,7 +5,7 @@ export const MainHeader = styled.div`
   padding: 10px 20px 1px 15px;
   width: 100vw;
   height: 12vh;
-  background-color: #f3acac;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -35,7 +35,7 @@ export const SearchNavbar = styled.div`
 export const SubSearchNav = styled.div`
   gap: 5px;
   padding: 0px 0px 0px 4px;
-  background-color: #b1b1b154;
+  background-color: #f2f2f2;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -81,7 +81,7 @@ export const NavbarBtnsDiv = styled.div`
 
 export const NavBtn = styled.button`
   padding: 5px 10px 5px 10px;
-  background-color: #b1b1b154;
+  background-color: #f2f2f2;
   color: black;
   display: flex;
   align-items: center;
@@ -184,17 +184,17 @@ export const ProductDiv = styled.div`
 `;
 
 export const ProImg = styled.img`
-  width: 310px;
-  height: 320px;
+  width: 280px;
+  height: 300px;
   margin-bottom: 10px;
-  background-color: greenyellow;
+  background-color: white;
 `;
 
 export const ProText = styled.div`
-  padding: 10px;
+  padding: 1px 10px 1px 10px;
   width: auto;
   height: auto;
-  background-color: aqua;
+  background-color: white;
   float: left;
   display: flex;
   flex-direction: column;
@@ -203,9 +203,14 @@ export const ProText = styled.div`
 `;
 
 export const Text19 = styled.p`
-  font-size: 21px;
+  font-size: 19px;
   font-family: sans-serif;
-  font-weight: bold;
+  font-weight: 550;
+`;
+
+export const Text17 = styled.p`
+  font-size: 17px;
+  font-family: sans-serif;
 `;
 
 export const Text16 = styled.p`
@@ -229,7 +234,7 @@ export const Text12 = styled.p`
 `;
 
 export const GrayText = styled.p`
-  color: gray;
+  color: #cecece;
 `;
 
 export const SizeDiv = styled.div`
@@ -242,10 +247,48 @@ export const Sizebox = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  border: 1px solid gray;
+  border: 1px solid #cecece;
   width: 36px;
   height: 36px;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    border: 1.5px solid black;
+  }
+`;
+
+export const SignleProfooter = styled.div`
+  width: 100vw;
+  height: 10vh;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid gray;
+`;
+
+export const PriceBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  height: 9vh;
+  background-color: white;
+`;
+
+export const CartBtn = styled.button`
+  width: 40vw;
+  height: 8vh;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `;
