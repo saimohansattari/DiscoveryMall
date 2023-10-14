@@ -13,7 +13,7 @@ export const MainHeader = styled.div`
 
 export const HomeIcon = styled.p`
   color: black;
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Inter-SemiBold", "Inter", sans-serif;
   font-weight: bold;
 `;
@@ -291,4 +291,41 @@ export const CartBtn = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+`;
+
+//Cart page stylled components
+
+export const CartsDisplaySec = styled.div`
+  height: 55vh;
+  background-color: #759ec1;
+  padding: 25px 15px 10px 15px;
+`;
+
+export const CartListItems = styled.div`
+  width: 90vw;
+  height: 85px;
+  background-color: #cc8181;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const CartImg = styled.img`
+  width: 75px;
+  height: 75px;
+  border-radius: 5px;
+`;
+export const CartText = styled.div`
+  width: 65vw;
+  height: 75px;
+  padding: 5px;
+  background-color: #6868b2;
+`;
+export const CartHeader = styled.div`
+  font-size: 13px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: space-between;
 `;
