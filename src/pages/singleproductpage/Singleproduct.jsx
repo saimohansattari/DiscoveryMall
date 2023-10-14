@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Frame1 } from "../../asserts/pngs/index.js";
 import { Cart } from "../../asserts/svgs/index.js";
+import { Link } from "react-router-dom";
 import { AllImages } from "../../components/constants.jsx";
 import {
   GrayText,
@@ -91,10 +92,14 @@ function Singleproduct() {
           </PriceBox>
 
           <PriceBox>
-            <CartBtn>
-              <Cart style={{ width: "20px", height: "20px", fill: "white" }} />{" "}
-              &nbsp; Add to cart
-            </CartBtn>
+            <Link to="/cart-page">
+              <CartBtn>
+                <Cart
+                  style={{ width: "20px", height: "20px", fill: "white" }}
+                />
+                &nbsp; Add to cart
+              </CartBtn>
+            </Link>
           </PriceBox>
         </SignleProfooter>
       </ProductDiv>
