@@ -7,3 +7,4 @@ export { ReactComponent as Search } from "./search.svg";
 export { ReactComponent as House } from "./home.svg";
 export { ReactComponent as Leftarrow } from "./leftarrow.svg";
 export { ReactComponent as Ratingstar } from "./ratingstar.svg";
+export { ReactComponent as Bin } from "./bin.svg";

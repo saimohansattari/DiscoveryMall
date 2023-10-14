@@ -297,17 +297,18 @@ export const CartBtn = styled.button`
 
 export const CartsDisplaySec = styled.div`
   height: 55vh;
-  background-color: #759ec1;
+  /* background-color: #759ec1; */
   padding: 25px 15px 10px 15px;
 `;
 
 export const CartListItems = styled.div`
   width: 90vw;
   height: 85px;
-  background-color: #cc8181;
+  background-color: #d6d6d65e;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-radius: 5px;
 `;
 
 export const CartImg = styled.img`
@@ -319,7 +320,10 @@ export const CartText = styled.div`
   width: 65vw;
   height: 75px;
   padding: 5px;
-  background-color: #6868b2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color:; */
 `;
 export const CartHeader = styled.div`
   font-size: 13px;
@@ -328,4 +332,22 @@ export const CartHeader = styled.div`
   color: black;
   display: flex;
   justify-content: space-between;
+`;
+
+export const QuantityCards = styled.div`
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+`;
+
+export const QuantityCard = styled.div`
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  width: 20px;
+  border: 1px solid black;
+  margin-top: 3px;
 `;

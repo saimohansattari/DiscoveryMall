@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import {
   GrayText,
   HomeIcon,
@@ -24,11 +25,25 @@ import {
   CartImg,
   CartText,
   CartHeader,
+  QuantityCard,
+  QuantityCards,
 } from "../../components/styled.components";
-import { Bell, Leftarrow, Ratingstar } from "../../asserts/svgs/index.js";
+import { Bell, Bin, Leftarrow } from "../../asserts/svgs/index.js";
+import { Frame1 } from "../../asserts/pngs";
 
 function Cartpage() {
   const navigate = useNavigate();
+  const [quantity, setQuantity] = useState(1);
+
+  const QuaIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const QuaDecrement = () => {
+    if (quantity >= 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
   return (
     <div>
@@ -57,9 +72,31 @@ function Cartpage() {
 
       <CartsDisplaySec>
         <CartListItems>
-          <CartImg></CartImg>
+          <CartImg src={Frame1} />
           <CartText>
-            <CartHeader>Productname</CartHeader>
+            <CartHeader>
+              Productname
+              <Bin
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  fill: "Red",
+                  cursor: "pointer",
+                }}
+              />
+            </CartHeader>
+            <Text11>
+              <GrayText>Size L</GrayText>
+            </Text11>
+
+            <CartHeader>
+              INR 1290
+              <QuantityCards>
+                <QuantityCard onClick={QuaDecrement}>-</QuantityCard>
+                <QuantityCard>{quantity}</QuantityCard>
+                <QuantityCard onClick={QuaIncrement}>+</QuantityCard>
+              </QuantityCards>
+            </CartHeader>
           </CartText>
         </CartListItems>
       </CartsDisplaySec>
