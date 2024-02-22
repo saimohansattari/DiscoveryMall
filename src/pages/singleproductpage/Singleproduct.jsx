@@ -25,14 +25,22 @@ import {
   CartBtn,
 } from "../../components/styled.components";
 import { Bell, Leftarrow, Ratingstar } from "../../asserts/svgs/index.js";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice.jsx";
 
 function Singleproduct() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { productId } = useParams();
   const product = AllImages.find((item) => item.id === productId);
   if (!product) {
     return "product details not found";
   }
+
+  const handleToCart = (product) => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <div>
       <MainHeader>
@@ -92,14 +100,12 @@ function Singleproduct() {
           </PriceBox>
 
           <PriceBox>
-            <Link to="/cart-page">
-              <CartBtn>
-                <Cart
-                  style={{ width: "20px", height: "20px", fill: "white" }}
-                />
-                &nbsp; Add to cart
-              </CartBtn>
-            </Link>
+            {/* <Link to="/cart-page"> */}
+            <CartBtn onClick={() => handleToCart(product)}>
+              <Cart style={{ width: "20px", height: "20px", fill: "white" }} />
+              &nbsp; Add to cart
+            </CartBtn>
+            {/* </Link> */}
           </PriceBox>
         </SignleProfooter>
       </ProductDiv>
