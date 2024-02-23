@@ -1,5 +1,4 @@
 import React from "react";
-import Cartpage from "../cartpage/Cartpage";
 import NavbarBtns from "../navbarBtnspage/NavbarBtns";
 import {
   BtnBars,
@@ -23,7 +22,8 @@ import {
   Cart,
 } from "../../asserts/svgs";
 import { All, Kids, Mens, Womens } from "../navbarpages/index.js";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -76,18 +76,24 @@ function Home() {
         </MenubtnDiv>
 
         <MenubtnDiv>
-          <Heart style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
-          <MenuText>Saved</MenuText>
+          <Link to="/saved">
+            <Heart style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
+            <MenuText>Saved</MenuText>
+          </Link>
         </MenubtnDiv>
 
         <MenubtnDiv>
-          <Cart style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
-          <MenuText>Cart</MenuText>
+          <Link to="/Cart">
+            <Cart style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
+            <MenuText>Cart</MenuText>
+          </Link>
         </MenubtnDiv>
 
         <MenubtnDiv>
-          <Gear style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
-          <MenuText>Settings</MenuText>
+          <Link to="/settings">
+            <Gear style={{ width: "20px", height: "20px", fill: "#aaaaaa" }} />
+            <MenuText>Settings</MenuText>
+          </Link>
         </MenubtnDiv>
       </MenuNavbar>
     </>

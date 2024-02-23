@@ -1,25 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useSelector } from "react-redux";
 import {
   GrayText,
   HomeIcon,
-  ItemName,
   MainHeader,
   Notification,
-  ProImg,
-  ProText,
-  ProductDiv,
-  Text12,
   Text11,
-  Text16,
-  Text19,
-  SizeDiv,
-  Sizebox,
-  SignleProfooter,
-  PriceBox,
-  Text17,
-  CartBtn,
   CartsDisplaySec,
   CartListItems,
   CartImg,
@@ -29,11 +16,13 @@ import {
   QuantityCards,
 } from "../../components/styled.components";
 import { Bell, Bin, Leftarrow } from "../../asserts/svgs/index.js";
-import { Frame1 } from "../../asserts/pngs";
 
 function Cartpage() {
+  const CartList = useSelector((state) => state.cart);
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
+
+  console.log(CartList);
 
   const QuaIncrement = () => {
     setQuantity(quantity + 1);
@@ -71,34 +60,37 @@ function Cartpage() {
       </MainHeader>
 
       <CartsDisplaySec>
-        <CartListItems>
-          <CartImg src={Frame1} />
-          <CartText>
-            <CartHeader>
-              Productname
-              <Bin
-                style={{
-                  width: "15px",
-                  height: "15px",
-                  fill: "Red",
-                  cursor: "pointer",
-                }}
-              />
-            </CartHeader>
-            <Text11>
-              <GrayText>Size L</GrayText>
-            </Text11>
+        {CartList.cartItem.map((data) => (
+          <CartListItems key={data.id}>
+            <CartImg src={data.Image} />
+            <CartText>
+              <CartHeader>
+                {data.ProductName}
+                <Bin
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    fill: "Red",
+                    cursor: "pointer",
+                  }}
+                />
+              </CartHeader>
+              <Text11>
+                <GrayText>Size L</GrayText>
+              </Text11>
 
-            <CartHeader>
-              INR 1290
-              <QuantityCards>
-                <QuantityCard onClick={QuaDecrement}>-</QuantityCard>
-                <QuantityCard>{quantity}</QuantityCard>
-                <QuantityCard onClick={QuaIncrement}>+</QuantityCard>
-              </QuantityCards>
-            </CartHeader>
-          </CartText>
-        </CartListItems>
+              <CartHeader>
+                INR {data.ProductPrice}
+                <QuantityCards>
+                  Quantitiy : {data.cartQuantity}
+                  {/* <QuantityCard onClick={QuaDecrement}>-</QuantityCard> */}
+                  {/* <QuantityCard>Quantitiy : {data.cartQuantity}</QuantityCard> */}
+                  {/* <QuantityCard onClick={QuaIncrement}>+</QuantityCard> */}
+                </QuantityCards>
+              </CartHeader>
+            </CartText>
+          </CartListItems>
+        ))}
       </CartsDisplaySec>
     </div>
   );
